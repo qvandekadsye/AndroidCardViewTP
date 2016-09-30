@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CardViewTP</string>
+    <string name="first_album_author">Toby Foxx</string>
+    <string name="first_album_name">Undertale Original SoundTrack</string>
+    <string name="first_album_year">2015</string>
+    <string name="first_album_type">Original SoundTrack</string>
+</resources>
+
