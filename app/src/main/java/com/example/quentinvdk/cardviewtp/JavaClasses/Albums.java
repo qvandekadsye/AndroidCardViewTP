@@ -9,15 +9,19 @@ public class Albums {
     private String artist;
     private int year;
     private String type;
+    private int coverID;
 
-    public Albums(String name, String artist, int year, String type) {
+    public Albums(String name, String artist, int year, String type, int coverID) {
         this.name = name;
         this.artist = artist;
         this.year = year;
         this.type = type;
-
-
+        this.coverID = coverID;
     }
+
+
+
+
 
     public String getName() {
         return name;
@@ -49,5 +53,13 @@ public class Albums {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public int getCoverID() {
+        return coverID;
+    }
+
+    public void setCoverID(int coverID) {
+        this.coverID = coverID;
     }
 }
