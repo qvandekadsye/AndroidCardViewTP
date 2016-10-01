@@ -2,7 +2,6 @@ package com.example.quentinvdk.cardviewtp;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -26,10 +25,9 @@ public class MainActivity extends AppCompatActivity {
         System.out.println(this.albumRecyclerView==null);
 
         this.llc= new LinearLayoutManager(this);
-        this.albumRecyclerView.setLayoutManager(new GridLayoutManager(this,2));
+        this.albumRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         this.initApp();
         this.albumRecyclerView.setAdapter(new AlbumAdapter(this.library));
-
     }
 
     /**
