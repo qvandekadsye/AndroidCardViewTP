@@ -21,13 +21,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        this.albumRecyclerView = (RecyclerView)findViewById(R.id.albumRecyclerView);
+        /*this.albumRecyclerView = (RecyclerView)findViewById(R.id.albumRecyclerView);
         System.out.println(this.albumRecyclerView==null);
 
         this.llc= new LinearLayoutManager(this);
         this.albumRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         this.initApp();
-        this.albumRecyclerView.setAdapter(new AlbumAdapter(this.library));
+        this.albumRecyclerView.setAdapter(new AlbumAdapter(this.library));*/
     }
 
     /**

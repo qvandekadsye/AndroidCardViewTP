@@ -14,12 +14,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        <!--<android.support.v7.widget.CardView
+        <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp">
-            &lt;!&ndash;Une cardview étant un frameLayout, il n'a aucune influence sur la disposition&ndash;&gt;
-            &lt;!&ndash; Il faut donc rajouter un layout à la cardview pour gérer la disposition&ndash;&gt;
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -50,14 +49,14 @@
                     android:layout_height="wrap_content"
                     android:text="@string/first_album_type"/>
             </LinearLayout>
--->
 
 
-        <!--</android.support.v7.widget.CardView>-->
 
-        <android.support.v7.widget.RecyclerView
+        </android.support.v7.widget.CardView>
+
+        <!--<android.support.v7.widget.RecyclerView
             android:id="@+id/albumRecyclerView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"/>-->
     </LinearLayout>
 </RelativeLayout>
