@@ -2,6 +2,7 @@ package com.example.quentinvdk.cardviewtp;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -22,10 +23,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         this.albumRecyclerView = (RecyclerView)findViewById(R.id.albumRecyclerView);
-        System.out.println(this.albumRecyclerView==null);
 
         this.llc= new LinearLayoutManager(this);
-        this.albumRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        //Permet un un affichage de haut en bas.
+        //this.albumRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        //Permet un affichage en grille, ici deux colonnes.
+        this.albumRecyclerView.setLayoutManager(new GridLayoutManager(this,2));
         this.initApp();
         this.albumRecyclerView.setAdapter(new AlbumAdapter(this.library));
     }
