@@ -62,4 +62,9 @@ public class Albums {
     public void setCoverID(int coverID) {
         this.coverID = coverID;
     }
+
+    public String toString()
+    {
+        return this.getName()+"-"+this.getArtist()+"-"+this.getYear()+"-"+this.getType();
+    }
 }

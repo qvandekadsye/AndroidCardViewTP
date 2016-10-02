@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.quentinvdk.cardviewtp.JavaClasses.Albums;
 import com.example.quentinvdk.cardviewtp.R;
@@ -31,9 +32,15 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.AlbumViewHol
     }
 
     @Override
-    public void onBindViewHolder(AlbumViewHolder holder, int position) {
+    public void onBindViewHolder(AlbumViewHolder holder, final int position) {
         Albums album = albumsLibrary.get(position);
         holder.bind(album);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(v.getContext(),albumsLibrary.get(position).toString(),Toast.LENGTH_LONG).show();
+            }
+        });
 
     }
 
@@ -55,6 +62,8 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.AlbumViewHol
             this.authorView = (TextView) itemView.findViewById(R.id.author);
             this.yearView = (TextView) itemView.findViewById(R.id.yearAlbum);
             this.typeView = (TextView) itemView.findViewById(R.id.genre);
+
+
         }
 
         //puis ajouter une fonction pour remplir la cellule en fonction d'un MyObject
