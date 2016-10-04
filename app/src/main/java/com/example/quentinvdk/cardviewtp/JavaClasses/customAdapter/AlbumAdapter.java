@@ -1,9 +1,12 @@
 package com.example.quentinvdk.cardviewtp.JavaClasses.customAdapter;
 
+import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,6 +28,14 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.AlbumViewHol
         this.albumsLibrary = albumsLibrary;
     }
 
+    private void showpopupmenu(View v, int position)
+    {
+        PopupMenu popup = new PopupMenu(v.getContext(),v);
+        MenuInflater inflater = popup.getMenuInflater();
+        inflater.inflate(R.menu.cardviewmenu,popup.getMenu());
+        popup.show();
+    }
+
     @Override
     public AlbumViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_cardview,parent,false);
@@ -41,6 +52,12 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.AlbumViewHol
                 Toast.makeText(v.getContext(),albumsLibrary.get(position).toString(),Toast.LENGTH_LONG).show();
             }
         });
+        holder.buttonMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showpopupmenu(v,position);
+            }
+        });
 
     }
 
@@ -52,6 +69,7 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.AlbumViewHol
     public static class AlbumViewHolder extends RecyclerView.ViewHolder {
         private ImageView imageHolder;
         private TextView nameView,authorView,typeView,yearView;
+        private ImageButton buttonMenu;
         public AlbumViewHolder(View itemView) {
             super(itemView);
 
@@ -62,6 +80,7 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.AlbumViewHol
             this.authorView = (TextView) itemView.findViewById(R.id.author);
             this.yearView = (TextView) itemView.findViewById(R.id.yearAlbum);
             this.typeView = (TextView) itemView.findViewById(R.id.genre);
+            this.buttonMenu = (ImageButton) itemView.findViewById(R.id.imagemenu);
 
 
         }

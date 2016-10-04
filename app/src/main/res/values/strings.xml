@@ -4,5 +4,6 @@
     <string name="first_album_name">Undertale Original SoundTrack</string>
     <string name="first_album_year">2015</string>
     <string name="first_album_type">Original SoundTrack</string>
+    <string name="del_card">Remove card</string>
 </resources>
 

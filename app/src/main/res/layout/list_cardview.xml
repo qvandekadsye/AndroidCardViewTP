@@ -17,6 +17,20 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
+                <android.support.v7.widget.Toolbar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end">
+
+                    <ImageButton
+                        android:layout_width="20sp"
+                        android:layout_height="30sp"
+                        android:src="@drawable/ic_more_vert_black_24dp"
+                        android:id="@+id/imagemenu"
+                        />
+
+                </android.support.v7.widget.Toolbar>
+
                 <ImageView
                     android:id="@+id/imageHolder"
                     android:layout_width="match_parent"
