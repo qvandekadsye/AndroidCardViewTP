@@ -22,8 +22,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         /*this.albumRecyclerView = (RecyclerView)findViewById(R.id.albumRecyclerView);
-        System.out.println(this.albumRecyclerView==null);
-
         this.llc= new LinearLayoutManager(this);
         this.albumRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         this.initApp();
