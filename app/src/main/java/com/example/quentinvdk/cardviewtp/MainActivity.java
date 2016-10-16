@@ -25,10 +25,7 @@ public class MainActivity extends AppCompatActivity {
         this.albumRecyclerView = (RecyclerView)findViewById(R.id.albumRecyclerView);
 
         this.llc= new LinearLayoutManager(this);
-        //Permet un un affichage de haut en bas.
-        //this.albumRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        //Permet un affichage en grille, ici deux colonnes.
-        this.albumRecyclerView.setLayoutManager(new GridLayoutManager(this,2));
+        this.albumRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         this.initApp();
         this.albumRecyclerView.setAdapter(new AlbumAdapter(this.library));
     }
